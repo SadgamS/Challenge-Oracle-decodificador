@@ -6,6 +6,14 @@ const llaves = {
   u: 'ufat',
 };
 
+const results = {
+    ai: 'a',
+    enter: 'e',
+    imes: 'i',
+    ober: 'o',
+    ufat: 'u',
+}
+
 const input = document.getElementById('texto');
 
 console.log(input);
@@ -15,17 +23,13 @@ const button = document.getElementById('encriptar');
 
 
 function encriptar(text) {
-    let encripted = '';
-    for (let i = 0; i < text.length; i++) {
-        if (text[i] in llaves) {
-           encripted = encripted + llaves[text[i]];
-        }
-        else {
-            encripted = encripted + text[i];
-        }
-    }
-    return encripted;
+    return text.replace(/[aeiou]/g, (match) => llaves[match]);
 }
+
+function desencriptar(text) {
+    return text.replace(/(ai|enter|imes|ober|ufat)/g, (match) => results[match]);
+}
+
 
 console.log(encriptar('hola'));
 
