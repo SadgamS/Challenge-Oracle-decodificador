@@ -16,6 +16,7 @@
     <div class="container-result">
         <div class="container-objects">
             <img class="img-person" src="img/Muñeco.png" alt="Muñeco">
+            <!-- TODO: agregar una etiqueta para mostrar el texto encriptado o desencriptado -->
             <span class="text-p-1">
                 Ningún mensaje fue encontrado
             </span>
@@ -32,8 +33,8 @@
             <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             <p class="text-warning">Solo letras minusculas y sin acentos</p>
             <div class="container-btns">
-                <button class="btn-enc" id="encriptar">Encriptar</button>
-                <button class="btn-dec">Desencriptar</button>
+                <button class="btn-enc" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-dec" onclick="btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
     </main>
