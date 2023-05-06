@@ -14,19 +14,21 @@
         <img src="img/Logo.png" alt="Logo">
     </header>
     <div class="container-result">
-        <div class="container-objects">
+        <div class="container-objects-results" id="container-objects-results">
+            <textarea class="result" name="resultado" id="resultado" cols="30" rows="10" readonly></textarea>
+            <span class="message" id="message"></span>
+            <button class="btn-copy" onclick="btnCopiar()">Copiar</button>
+        </div>
+        <div class="container-objects" id="container-objects">
             <img class="img-person" src="img/Muñeco.png" alt="Muñeco">
-            <!-- TODO: agregar una etiqueta para mostrar el texto encriptado o desencriptado -->
             <span class="text-p-1">
                 Ningún mensaje fue encontrado
             </span>
             <span class="text-p-2">
                 Ingrese el texto que desea encriptar o desencriptar
             </span>
-            <button class="btn-copy">
-                Copiar
-            </button>
         </div>
+
     </div>
     <main>
         <section>
@@ -35,9 +37,11 @@
             <div class="container-btns">
                 <button class="btn-enc" onclick="btnEncriptar()">Encriptar</button>
                 <button class="btn-dec" onclick="btnDesencriptar()">Desencriptar</button>
+                <button class="btn-limpiar" onclick="btnLimpiar()">X</button>
             </div>
         </section>
     </main>
+    <!-- TODO: mejorar y agregar footer-->
 </body>
 <script src="main.js"></script>
 
