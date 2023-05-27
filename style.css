@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
 }
 
 body {
@@ -10,42 +9,126 @@ body {
 }
 
 header {
-  position: static;
-  width: calc(100% - 400px);
-  padding: 30px 10px;
+  height: 5rem;
+  background-color: #a2c3eb;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+header h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+footer{
+  height: 4.4rem;
+  background-color: #d8eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+footer span{
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 5px;
+  color: #0a3871;
+}
+
+footer a{
+  text-decoration: none;
+  color: #0a3871;
 }
 
 button {
   cursor: pointer;
 }
-.container-result {
-  position: fixed;
-  height: calc(100vh - 4rem);
-  top: 0;
-  right: 0;
-  margin: 2rem 2rem 1rem 1rem;
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-principal {
+  width: 50%;
   background: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-principal textarea {
+  width: 90%;
+  height: 60vh;
+  resize: none;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  color: #0a3871;
+}
+
+.container-principal textarea:focus {
+  outline: none;
+}
+
+.container-principal textarea::placeholder {
+  color: #0a3871;
+}
+
+.container-principal .text-warning {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+}
+.container-result {
+  width: 50%;
+  margin: 0 2rem 0 1rem;
+  background: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-objects-results {
   display: none;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 .result {
   width: 90%;
-  height: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 58vh;
   resize: none;
+  margin-top: 20px;
   padding: 10px;
   border: none;
-  font-size: 19px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 32px;
   line-height: 120%;
   color: #0a3871;
 }
@@ -56,13 +139,14 @@ button {
 
 .message {
   display: none;
-  color: #0a3871;
+  color: #0f1e31;
   font-size: medium;
-  font-style: normal;
+  font-style: italic;
   font-weight: bold;
 }
 
 .container-objects {
+  height: 78vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +154,7 @@ button {
 .img-person {
   width: 70%;
   height: 70%;
-  margin-top: 60%;
+  margin-top: 20%;
   margin-bottom: 20px;
 }
 .text-p-1 {
@@ -96,8 +180,8 @@ button {
 }
 
 .btn-copy {
-  width: 70%;
-  margin-top: 10%;
+  width: 60%;
+  margin-top: 5%;
   margin-bottom: 20px;
   background: #ffffff;
   border: 1px solid #0a3871;
@@ -116,61 +200,17 @@ button {
   color: #ffffff;
 }
 
-main {
-  width: calc(100% - 400px);
-  padding: 30px;
-}
-
-main section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main section textarea {
-  width: 80%;
-  height: 65vh;
-  resize: none;
-  padding: 10px;
-  border: none;
-  background-color: #f3f5fc;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 120%;
-  color: #0a3871;
-}
-
-main section textarea:focus {
-  outline: none;
-}
-
-main section textarea::placeholder {
-  color: #0a3871;
-}
-
-main section .text-warning {
-  align-self: flex-start;
-  margin-left: 20%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: #495057;
-  opacity: 0.8;
-}
-
-main section .container-btns {
-  width: 60%;
+.container-btns {
+  width: 90%;
   margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 .btn-enc {
-  width: 45%;
+  width: 35%;
   background: #0a3871;
   border: 1px solid #0a3871;
   border-radius: 24px;
@@ -188,9 +228,8 @@ main section .container-btns {
   color: #0a3871;
 }
 
-
 .btn-dec {
-  width: 45%;
+  width: 35%;
   background: #d8dfe8;
   border: 1px solid #0a3871;
   border-radius: 24px;
@@ -208,10 +247,10 @@ main section .container-btns {
   color: #0a3871;
 }
 
-.btn-limpiar{
-  width: 10%;
-  display: inline;
-  background: #d8dfe8;
+.btn-limpiar {
+  width: 20%;
+  display: none;
+  background: #ffffff;
   border: 1px solid #0a3871;
   border-radius: 24px;
   color: #0a3871;
@@ -222,4 +261,79 @@ main section .container-btns {
   text-align: center;
   padding: 15px;
 }
-/* TODO: hacer resposive la pagina */
+/* Mode responsive */
+
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px 0px 20px 0px;
+    justify-content: center;
+  }
+
+  header img {
+    display: none;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0px;
+    display: block;
+  }
+
+  .container-principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-principal textarea {
+    width: 90%;
+    height: 50vh;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .container-principal .text-warning {
+    padding: 10px;
+  }
+
+  .container-btns {
+    width: 90%;
+    display: block;
+  }
+
+  .btn-enc,
+  .btn-dec {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  .btn-limpiar {
+    width: 100%;
+    padding: 5px;
+  }
+  .container-result {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .img-person {
+    display: none;
+  }
+
+  .result {
+    width: 90%;
+    padding: 5px;
+    margin: 0px;
+    font-size: 16px;
+  }
+}
